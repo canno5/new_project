@@ -1,6 +1,8 @@
 console.log("Script running");
 
 const navbar = document.getElementsByClassName("navbar");
+console.log(navbar);
+
 
 // console.log("Narbar", navbar);
 // navbar[0].scrollTop

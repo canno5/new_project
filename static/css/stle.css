@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Della Respira', serif;
+    font-family: "Baloo 2", sans-serif;
 }
 
 html {
@@ -107,7 +107,8 @@ body {
     /* background: rgb(245, 242, 242); */
     /* border: 1px solid red; */
 }
-.tab_naviagtion{
+
+.tab_naviagtion {
     /* position: sticky;
     top: 0px !important; */
 }
@@ -500,7 +501,8 @@ body {
 
 
 }
-.icon button{
+
+.icon button {
     border: 0;
 }
 
@@ -813,7 +815,8 @@ footer p {
     /* overflow: hidden; */
     /* box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.9); */
 }
-.about-info button:hover{
+
+.about-info button:hover {
     background: red;
 }
 
@@ -828,7 +831,7 @@ footer p {
     font-weight: 600;
 }
 
-.about-info button::after{
+.about-info button::after {
     /* position: absolute;
     background: red !important;
     z-index: 200; */
@@ -1017,14 +1020,16 @@ footer {
     color: black;
     font-weight: 600;
 }
-.hide_area{
+
+.hide_area {
     /* visibility: hidden; */
     /* opacity: 0; */
-    display: none ;
+    display: none;
 }
-#tab_1{
+
+#tab_1 {
     /* display: flex; */
-    display: grid ;
+    display: grid;
     /* opacity: 1; */
     /* visibility: visible; */
 }
