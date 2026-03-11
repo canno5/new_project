@@ -1,13 +1,15 @@
 const express = require("express")
 const app = express();
-let PORT = process.env.PORT || 1000
+let PORT = 1000 || process.env.PORT
 let path = require("path");
 require("dotenv").config({path:".env"});
-const dbFunc = require("../db/conn");
-let staticPath = path.join(__dirname, "../static")
-let tempPath = path.join(__dirname, "../template/views");
+const dbFunc = require("../controller/db/conn");
+let staticPath = path.join(__dirname, "../controller/static")
+console.log(staticPath)
+let tempPath = path.join(__dirname, "../controller/template/views");
+console.log(tempPath)
 const fs = require("fs");
-const contactModel = require("../models/Contact");
+const contactModel = require("../controller/models/Contact");
 app.use("/static", express.static(staticPath));
 app.set("view engine", "html");
 app.set("views", tempPath);
