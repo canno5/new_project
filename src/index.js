@@ -2,19 +2,20 @@ const express = require("express")
 const app = express();
 let PORT = 1000 || process.env.PORT
 let path = require("path");
-require("dotenv").config({path:".env"});
+require("dotenv").config({ path: ".env" });
 const dbFunc = require("../controller/db/conn");
 let staticPath = path.join(__dirname, "../controller/static")
-console.log(staticPath)
 let tempPath = path.join(__dirname, "../controller/template/views");
-console.log(tempPath)
+
 const fs = require("fs");
 const contactModel = require("../controller/models/Contact");
+
 app.use("/static", express.static(staticPath));
 app.set("view engine", "html");
 app.set("views", tempPath);
 app.use(express.static(staticPath))
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
 app.engine("html", function (path, option, cb) {
     fs.readFile(path, (err, data) => {
         if (err) {
@@ -47,23 +48,24 @@ app.get("/services", (req, res) => {
     }
 
 });
-app.get("/contacts", (req, res) => {
+app.get("/contact", (req, res) => {
     try {
         res.status(200).render("contact");
-        
+
     } catch (err) {
         return err
-        
+
     }
 
 });
 app.post("/contact", async (req, res) => {
     try {
-        await contactModel.create(req.body)
+        let { name, phone, email, message } = req.body
+        await contactModel.create({ name, phone, email, message });
         res.status(201).json({ msg: "Thank You for Contact form Us" })
 
     } catch (err) {
-        // console.log('The Err',err)
+        console.log('The Err', err)
         return err
 
     }
@@ -78,7 +80,7 @@ app.get("/reviews", (req, res) => {
 app.get("/error", (req, res) => {
     try {
         res.status(404).redirect('/')
-   
+
     } catch (error) {
         console.log('Th Err', error)
     }

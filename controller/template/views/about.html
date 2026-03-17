@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Canan Dev About</title>
     <link rel="stylesheet" href="../../static/css/stle.css">
+    <link rel="shortcut icon" href="./images/aboutme3.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -13,31 +17,18 @@
 
         <div class="logo">
             <div class="logos">
-                <!-- <img src="images/deal.png" alt=""> -->
                 <span>Canan Dev</span>
             </div>
             <p>Web Dev!</p>
         </div>
         <ul>
             <li><a href="/">Home</a></li>
-            <!-- <li><a href="#about">About</a></li> -->
             <li><a href="/about">About</a></li>
             <li><a href="/services">Services</a></li>
-            <li><a href="/contacts">Contact</a></li>
-            <!-- <li><a href="#">List</a>
-            <ul class="dropdown">
-                <li><a href="#">html</a></li>
-                <li><a href="#">css</a></li>
-                <li><a href="#">JavaScript</a></li>
-            </ul>
-            </li> -->
+            <li><a href="/contact">Contact</a></li>
             <li><a href="/project">Project</a></li>
             <li><a href="/reviews">Reviews</a></li>
         </ul>
-        <!-- <div class="rightnav">
-            <input type="search" name="search" id="search" placeholder="Seaech Website">
-            <button type="button" class="btn-sm">Search</button>
-        </div> -->
     </nav>
     <section class="containers">
         <div class="abouts">
@@ -47,12 +38,23 @@
                 </div>
                 <div class="about-info">
                     <h2 class="">About Info</h2>
-                    <p>Welcome To Canan Dev Professional Development, Also Known As Professional Education, Is Learning That Leads To Or Emphasizes Education In A Specific Professional Career Field Or Builds Practical Job Applicable Skills Emphasizing Praxis In Addition To The Transferable Skills And Theoretical Academic Knowledge Found In Traditional Liberal Arts And Pure Sciences Education.</p>
-                    <br>
-                    <p>A web developer is a tech professional who designs, builds, and maintains websites and web applications. They bridge the gap between creative concepts and functional digital experiences, ensuring sites are visually appealing, easy to navigate, and perform efficiently across various devices.
+                    <p>Welcome To Canan Dev Professional Development, Also Known As Professional Education, Is Learning
+                        That Leads To Or Emphasizes Education In A Specific Professional Career Field Or Builds
+                        Practical Job Applicable Skills Emphasizing Praxis In Addition To The Transferable Skills And
+                        Theoretical Academic Knowledge Found In Traditional Liberal Arts And Pure Sciences Education.
                     </p>
                     <br>
-                    <p>An app developer (or application developer) is a specialized software engineer who designs, builds, and maintains programs for specific platforms—most commonly mobile devices, but also desktops and web browsers. Unlike general software developers, app developers focus heavily on the user-facing experience and optimizing software for specific hardware constraints like screen size, touch input, and sensors.</p>
+                    <p>A web developer is a tech professional who designs, builds, and maintains websites and web
+                        applications. They bridge the gap between creative concepts and functional digital experiences,
+                        ensuring sites are visually appealing, easy to navigate, and perform efficiently across various
+                        devices.
+                    </p>
+                    <br>
+                    <p>An app developer (or application developer) is a specialized software engineer who designs,
+                        builds, and maintains programs for specific platforms—most commonly mobile devices, but also
+                        desktops and web browsers. Unlike general software developers, app developers focus heavily on
+                        the user-facing experience and optimizing software for specific hardware constraints like screen
+                        size, touch input, and sensors.</p>
                     <!-- <div class="btn-about"> -->
                     <button><a href="https://github.com/" target="_blank">Read More</a></button>
                     <!-- </div> -->
@@ -61,29 +63,70 @@
         </div>
         <div class="projects">
             <h1 class="text-centers h1">Porject Overview</h1>
-            <div class="project-box containerss" >
+            <div class="project-box containerss">
                 <div class="user">
-                    <h2>20+</h2>
-                    <p>Projects</p>
+                    <a style="color: white;"><i class="fas fa-hand-point-right"></i></a>
+                    <div class="cbox">
+                        <h2 class="cld-100">0%</h2>
+                        <p>Cliend Statifaction</p>
+                    </div>
                 </div>
                 <div class="user">
-                    <h2>100</h2>
-                    <p>User</p>
+                    <a style="color: white;"><i class="fas fa-project-diagram"></i></a>
+                    <div class="cbox">
+                        <h2 class="prog-50">0+</h2>
+                        <p>Complete Project</p>
+                    </div>
                 </div>
                 <div class="user">
-                    <h2>10</h2>
-                    <p>Cliends</p>
+                    <a style="color: white;"><i class="fas fa-smile"></i></a>
+                    <div class="cbox">
+                        <h2 class="">5/5</h2>
+                        <p>Average Rating</p>
+                    </div>
                 </div>
                 <div class="user">
-                    <h2>2</h2>
-                    <p>Active Cliend</p>
+                    <a style="color: white;"><i class="fab fa-creative-commons-by"></i></a>
+                    <div class="cbox">
+                        <h2 class="">4</h2>
+                        <p>Active Cliend</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-       <footer>
+    <footer>
         <p>Copy Right All Right Are Reserved Develop By <a href="" style="color: white;">Mr.Canan</a> 2026.</p>
     </footer>
+    <script>
+
+
+        // window.addEventListener("focus", ()=>{
+        //     console.log('Focus')
+        // })
+
+        let counter = 0;
+        let counter_1 = 0;
+        let clinsta = document.querySelector('.cld-100');
+        let prog_50 = document.querySelector(".prog-50");
+    
+        window.addEventListener("scrollend", () => {
+            setInterval(() => {
+                if (counter < 100) {
+                    counter++;
+                } if (counter_1 < 50) {
+                    counter_1++;
+                }
+                clinsta.textContent = `${counter}%`;
+                prog_50.textContent = `${counter_1}+`;
+
+            }, 100);
+        });
+
+
+    </script>
+    <script src="/static/js/script.js"></script>
+
 
 
 </body>
